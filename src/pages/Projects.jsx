@@ -1,69 +1,50 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { FaGithub } from "react-icons/fa";
 
 // ---- Project Data ----
 const projects = [
   {
-    id: 4,
+    id: 1,
     title: "Restaurant Management System (MERN Stack)",
     description: "Built a role-based restaurant platform with ordering, queue management, and e-wallet integration using MERN.",
     image: "./projects/resturant.png",
-    achievements: [
-      "Created separate dashboards for users, chefs, and admins",
-      "Added order queueing and item tracking with status updates",
-      "Enabled admin control with photo, ingredients, and price editing"
-    ],
-    technologies: ["MongoDB", "Express.js", "React.js", "Node.js", "JWT", "Tailwind CSS"]
-  },
-  {
-    id: 1,
-    title: "SAR Image Colorization using Deep Learning",
-    description: "Developed a CNN-based model to colorize grayscale SAR images, enhancing interpretability for remote sensing tasks.",
-    image: "./projects/sar.png",
-    achievements: [
-      "Improved visual clarity in grayscale SAR imagery",
-      "Achieved SSIM of 0.89 and PSNR of 28.6 dB",
-      "Facilitated better environmental monitoring through visualization"
-    ],
-    technologies: ["Python", "TensorFlow", "CNN", "Deep Learning", "Remote Sensing"]
+    technologies: ["MongoDB", "Express.js", "React.js", "Node.js", "JWT", "Tailwind CSS"],
+    github: "https://github.com/AbishekPrasad/restaurant-management"
   },
   {
     id: 2,
-    title: "Brain Tumor Classification with VGG16",
-    description: "Created a deep learning model using VGG16 and transfer learning to classify MRI scans as tumor or non-tumor.",
-    image: "./projects/tumor.png",
-    achievements: [
-      "Achieved 98.3% accuracy on test MRI dataset",
-      "Utilized VGG16 with transfer learning for feature extraction",
-      "Optimized for clinical-grade performance using medical imaging best practices"
-    ],
-    technologies: ["Python", "TensorFlow", "VGG16", "Transfer Learning", "Medical Imaging"]
+    title: "SAR Image Colorization using Deep Learning",
+    description: "Developed a CNN-based model to colorize grayscale SAR images, enhancing interpretability for remote sensing tasks.",
+    image: "./projects/sar.png",
+    technologies: ["Python", "TensorFlow", "CNN", "Deep Learning", "Remote Sensing"],
+    github: "https://github.com/AbishekPrasad/SAR-Image-Enhancement-Using-Deep-Learning.git"
   },
   {
     id: 3,
+    title: "Brain Tumor Classification with VGG16",
+    description: "Created a deep learning model using VGG16 and transfer learning to classify MRI scans as tumor or non-tumor.",
+    image: "./projects/tumor.png",
+    technologies: ["Python", "TensorFlow", "VGG16", "Transfer Learning", "Medical Imaging"],
+    github: "https://github.com/AbishekPrasad/Brain-Tumor-Detection-and-Classification-using-Deep-Learning.git"
+  },
+  {
+    id: 4,
     title: "Smart Solar Load Management using IoT + ML (Ongoing)",
     description: "Designed an intelligent energy system using ML and IoT to manage and prioritize solar loads for optimal usage.",
     image: "./projects/solar.png",
-    achievements: [
-      "Real-time solar monitoring",
-      "Predicted consumption trends and switched critical loads dynamically",
-    ],
-    technologies: ["Python", "ESP32", "IoT", "GSM", "Machine Learning"]
+    technologies: ["Python", "ESP32", "IoT", "GSM", "Machine Learning"],
+    github: "https://github.com/AbishekPrasad/solar-load-iot"
   },
   {
     id: 5,
     title: "Crypto Payment Gateway (Web3 Blockchain)",
     description: "Engineered a blockchain-agnostic crypto payment gateway with MetaMask wallet integration for dApp payments.",
     image: "./projects/crypto.png",
-    achievements: [
-      "Designed secure smart contract transaction flow",
-      "Implemented support for multiple wallets and tokens",
-      "Created blockchain-agnostic logic for decentralized platforms"
-    ],
-    technologies: ["Solidity", "Web3.js", "Smart Contracts", "React", "Ethereum"]
+    technologies: ["Solidity", "Web3.js", "Smart Contracts", "React", "Ethereum"],
+    github: "https://github.com/AbishekPrasad/crypto-payment-gateway"
   }
 ];
-
 
 // ---- Component ----
 const Projects = () => {
@@ -104,13 +85,8 @@ const Projects = () => {
                   {project.title}
                 </h3>
                 <p className="text-gray-300 mb-4">{project.description}</p>
-                <h4 className="text-white font-semibold mb-2">Key Achievements:</h4>
-                <ul className="list-disc pl-5 text-gray-300 space-y-1 mb-4">
-                  {project.achievements.map((item, i) => (
-                    <li key={i}>{item}</li>
-                  ))}
-                </ul>
-                <div className="flex flex-wrap gap-2">
+                
+                <div className="flex flex-wrap gap-2 mb-6">
                   {project.technologies.map((tech, i) => (
                     <span
                       key={i}
@@ -120,20 +96,21 @@ const Projects = () => {
                     </span>
                   ))}
                 </div>
+
+                {project.github && (
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-indigo-300 hover:text-indigo-400 font-medium transition"
+                  >
+                    <FaGithub /> View GitHub
+                  </a>
+                )}
               </div>
             </motion.div>
           ))}
         </div>
-
-        {/* ---- Work Experience ---- */}
-        <motion.div
-          className="mt-20"
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
-        >
-        </motion.div>
       </div>
     </section>
   );
