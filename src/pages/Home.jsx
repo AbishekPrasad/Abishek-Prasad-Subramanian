@@ -54,7 +54,7 @@ const Home = () => {
               transition={{ duration: 0.5, delay: 0.9 }}
             >
               <div className="flex items-center">
-                <span className="mr-3">I'm </span>
+                <span className="mr-3 h-11">a </span>
                 <div className="h-12 overflow-hidden">
                   <div>
                       <div className="h-12 flex items-center text-indigo-400 animate-slide-up delay-[200ms]">B.Tech IT Student</div>
