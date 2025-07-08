@@ -173,7 +173,7 @@ continuously expand technical and collaborative skills through hands-on learning
                 <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-indigo-500"></div>
                 <h4 className="text-xl font-bold text-white">Higher Secondary</h4>
                 <p className="text-indigo-300 mb-2">Lisieux Matriculation Higher Secondary School | 2020 - 2022</p>
-                <p className="text-gray-400">Coimbatore, Tamil Nadu | 75%</p>
+                <p className="text-gray-400">Coimbatore, Tamil Nadu | 77%</p>
               </div>
               
               <div className="relative pl-8">
