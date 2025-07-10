@@ -175,7 +175,6 @@ continuously expand technical and collaborative skills through hands-on learning
                 <p className="text-indigo-300 mb-2">Lisieux Matriculation Higher Secondary School | 2020 - 2022</p>
                 <p className="text-gray-400">Coimbatore, Tamil Nadu | 77%</p>
               </div>
-              </div>
             </div>
           </div>
         </motion.div>
