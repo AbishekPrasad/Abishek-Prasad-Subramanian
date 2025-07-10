@@ -10,7 +10,7 @@ const projects = [
     description: "Built a role-based restaurant platform with ordering, queue management, and e-wallet integration using MERN.",
     image: "./projects/resturant.png",
     technologies: ["MongoDB", "Express.js", "React.js", "Node.js", "JWT", "Tailwind CSS"],
-    github: "https://github.com/AbishekPrasad/restaurant-management"
+    github: "https://github.com/AbishekPrasad/Restaurant-Management-System.git"
   },
   {
     id: 2,
