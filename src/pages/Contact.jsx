@@ -92,7 +92,7 @@ function Contact() {
               </div>
               <div>
                 <h4 className="text-lg font-semibold text-white">Location</h4>
-                <p className="text-gray-300 mt-1">27/J-13, Vinayaga Apartment<br />Venlandipalayam, Coimbatore - 641025<br />Tamil Nadu</p>
+                <p className="text-gray-300 mt-1">27/J-13, Vinayaga Apartment<br />Velandipalayam, Coimbatore - 641025<br />Tamil Nadu</p>
               </div>
             </div>
             {/* Email */}
